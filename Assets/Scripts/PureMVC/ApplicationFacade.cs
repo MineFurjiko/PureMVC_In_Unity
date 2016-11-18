@@ -17,6 +17,10 @@ public class ApplicationFacade : Facade {
 		}
 	}
 
+	/// <summary>
+	/// 启动PureMVC
+	/// </summary>
+	/// <param name="sender"></param>
 	public void StartUp(object sender=null) {
 		//发送 StartUp 通知
 		SendNotification(NotificationEnum.STARTUP, sender);
