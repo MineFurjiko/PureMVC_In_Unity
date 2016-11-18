@@ -2,6 +2,7 @@
 using PureMVC.Patterns;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 public class UIPanel1Mediator:Mediator,IMediator {
 	public new const string NAME = "UIPanel1Mediator";
 
@@ -27,7 +28,7 @@ public class UIPanel1Mediator:Mediator,IMediator {
 	private void TryLogin() {
 		//发送的事件string(NotificationEnum.DOSOMETHINGS) 
 		//发送者(this)
-		SendNotification(NotificationEnum.LoginPanelNotification.TESTINLOGINPANEL, this);
+		//SendNotification(NotificationEnum.LoginPanelNotification.TESTINLOGINPANEL, this);
 		SendNotification(NotificationEnum.LoginPanelNotification.TRYLOGIN,
 			ViewComponent.GetInputLoginVO());
 	}
@@ -42,6 +43,7 @@ public class UIPanel1Mediator:Mediator,IMediator {
 		list.Add(NotificationEnum.LoginPanelNotification.TESTINLOGINPANEL);
 		list.Add(NotificationEnum.LoginPanelNotification.LOGINSUCCEED);
 		list.Add(NotificationEnum.LoginPanelNotification.LOGINFAIL);
+
 		return list;
 	}
 
@@ -54,7 +56,6 @@ public class UIPanel1Mediator:Mediator,IMediator {
 			case NotificationEnum.LoginPanelNotification.TESTINLOGINPANEL:
 				Debug.Log("UIPanel1Mediator 处理 "+notification.Name+" ...");
 				Debug.Log(notification.Body);
-
 				ViewComponent.text.text = "Click!";
 				break;
 			case NotificationEnum.LoginPanelNotification.LOGINSUCCEED:

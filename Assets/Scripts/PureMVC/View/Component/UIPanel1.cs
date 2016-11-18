@@ -8,7 +8,7 @@ public class UIPanel1 : PureViewWithMonoBehaviour {
 	public Text text;
 	public Button button;
 	public InputField userNameInputField;
-	public InputField PasswordInputField;
+	public InputField passwordInputField;
 
 	public Action TryLoginEvent;
 
@@ -24,12 +24,12 @@ public class UIPanel1 : PureViewWithMonoBehaviour {
 	public LoginVO GetInputLoginVO() {
 		var loginVO = new LoginVO();
 		loginVO.UserName = userNameInputField.text;
-		loginVO.Password = PasswordInputField.text;
+		loginVO.Password = passwordInputField.text;
 		return loginVO;
 	}
 
 	private bool CheckInput(){
-		if (string.IsNullOrEmpty(userNameInputField.text)&&string.IsNullOrEmpty(PasswordInputField.text)) 
+		if (string.IsNullOrEmpty(userNameInputField.text)&&string.IsNullOrEmpty(passwordInputField.text)) 
 			return false;
 		return true;
 	}

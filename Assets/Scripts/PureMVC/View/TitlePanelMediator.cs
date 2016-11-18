@@ -20,6 +20,7 @@ public class TitlePanelMediator : Mediator, IMediator {
 		var list = base.ListNotificationInterests();
 
 		list.Add(NotificationEnum.BOOSTRAP);
+
 		return list;
 	}
 
