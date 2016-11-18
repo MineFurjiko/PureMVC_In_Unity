@@ -2,7 +2,7 @@
 using PureMVC.Patterns;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+
 public class UIPanel1Mediator:Mediator,IMediator {
 	public new const string NAME = "UIPanel1Mediator";
 
